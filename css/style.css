@@ -1,0 +1,125 @@
+
+body{
+    background-image: url('./image/imagedacceuil.jpg'); 
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     margin: 0;
+     padding: 0;
+}
+
+
+.container-fluid{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    background-color: burlywood ;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.cardItem img{
+    width: 100%;
+}
+
+
+.LeftMenu .col-2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+  
+.leftMenu .col-2 img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+
+div{
+    margin: 20px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size:  18px;
+}
+
+
+h1{
+    margin-left: 250px;
+    padding: 20px;
+}
+
+
+
+.profil{
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px auto ;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+}
+.profil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: burlywood;
+}
+
+.shadow{
+    background: rgba(226, 220, 220, 0.5);
+    padding: 20px;
+    border-radius: 10ox;
+    color: white;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.apropos{
+    background-color: white;
+    padding: 5%;
+    width: 85%;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 10px;
+    box-sizing: 3px 20px 20px black;
+}
+
+
+.cardItem{
+    width: 100%;
+    min-width: 30px ;
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2%;
+}
+
+p{
+    text-align: justify;
+}
+
+.cardItem a{
+
+}
