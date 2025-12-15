@@ -1,125 +1,264 @@
 
-body{
-    background-image: url('./image/imagedacceuil.jpg'); 
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     margin: 0;
-     padding: 0;
-}
-
-
-.container-fluid{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 230px;
-    height: 100vh;
-    background-color: burlywood ;
-    color: white;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+    background-image: url("../image/fonddecran.jpg");
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
 }
 
-.cardItem img{
+/* --- BURGER MENU --- */
+
+.burger {
+    width: 35px;
+    height: 28px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: none; /* par défaut caché */
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger span {
+    height: 5px;
     width: 100%;
+    background: white;
+    border-radius: 5px;
+}
+
+/* TRIGGER ANIMATION (petite rotation en X quand ouvert) */
+.burger.active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
 }
 
 
-.LeftMenu .col-2{
+/*   SIDEBAR   */
+
+.sidebar {
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     width: 230px;
     height: 100vh;
-    background-color: black;
-    color: white;
+    background-color:black;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-}
-  
-.leftMenu .col-2 img {
-    width: 120px;
-    border-radius: 50%;
-    margin-bottom: 20px;
 }
 
-
-
-div{
-    margin: 20px 0;
+.sidebar a {
     color: white;
     text-decoration: none;
+    margin: 15px 0;
+    font-weight: bold;
     font-size: 18px;
 }
 
-a{
-    color: white;
-    text-decoration: none;
-    font-size:  18px;
+.sidebar a:hover {
+    color: rgb(218, 167, 221);
 }
 
+/*   PROFIL    */
 
-h1{
-    margin-left: 250px;
-    padding: 20px;
-}
-
-
-
-.profil{
+.profil {
     width: 120px;
     height: 120px;
-    margin: 0 auto 20px auto ;
     border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid white;
-}
-.profil img{
-    width: 100%;
-    height: 100%;
+    margin-bottom: 30px;
     object-fit: cover;
-    color: burlywood;
-}
-
-.shadow{
-    background: rgba(226, 220, 220, 0.5);
-    padding: 20px;
-    border-radius: 10ox;
-    color: white;
-    max-width: 600px;
-    margin: 20px auto;
-}
-.apropos{
-    background-color: white;
-    padding: 5%;
-    width: 85%;
-    margin: auto;
-    margin-top: 10%;
-    border-radius: 10px;
-    box-sizing: 3px 20px 20px black;
 }
 
 
-.cardItem{
-    width: 100%;
-    min-width: 30px ;
+/*   CONTENU PRINCIPAL  */
+
+
+.content {
+    margin-left: 250px;
+    padding: 200px;  
+        
 }
 
-h2{
+
+/*   HERO    */
+
+.hero h1 {
     font-size: 3rem;
-    text-align: center;
-    margin: 2%;
 }
 
-p{
-    text-align: justify;
+/* --- CENTRER LES SECTIONS DANS DES BLOCS --- */
+.sectionBox {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-.cardItem a{
-
+/* --- COMPÉTENCES --- */
+.skill {
+    margin-bottom: 35px;
 }
+
+.label {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.bar {
+    width: 100%;
+    height: 18px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: width 2.5s ease-out;
+}
+
+.skills-htmlcss { background-color: pink; }
+.skills-js { background-color: goldenrod; }
+.skills-php { background-color: black; }
+
+
+
+/*   PORTFOLIO   */
+
+.portfolioContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cardItem {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.cardItem img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/*   FORMULAIRE DE CONTACT   */
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    gap: 10px;
+}
+
+.contactForm input,
+.contactForm textarea {
+    width: 220%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contactForm button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 180px;     
+    }
+
+    .content {
+        margin-left: 190px;
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .portfolioContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .profil {
+        display: none; 
+    }
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        transform: translateX(-110%);
+        transition: transform 0.4s ease;
+        width: 230px;
+        position: fixed;
+        z-index: 900;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .burger {
+        display: flex; /* Affiche le burger */
+    }
+
+    .content {
+        margin-left: 0; /* plus de sidebar = contenu centré */
+        padding: 20px;
+    }
+}
+

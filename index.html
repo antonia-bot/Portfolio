@@ -1,83 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>PORT-FOLIO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
 </head>
 
-   <h1> Dévéloppeuse web </h1>
-    
 <body>
-<div class="container-fluid">
-    <div class="container-fluid row">
 
-        <nav class="leftMenu col-2">
-            <div>
-                <img src="./image/fonddecran.jpg" alt="" class="pf">
-            </div>
+      <!-- MENU BURGER (visible seulement en mobile) -->
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-            <div>
-                <a href="#apropos">A propos</a>
-            </div>
 
-            <div>
-                <a href="#portfolio">Port-folio</a>
-            </div>
+    <nav class="sidebar">
+        <img src="./image/profil1.jpeg" alt="Photo de profil" class="profil">
 
-            <div>
-                <a href="#competence">Compétences</a>
-            </div>
+        
+        <a href="#apropos">À propos</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-            <div>
-                <a href="#contact">Contact</a>
-            </div>
 
-        </nav>
+    <main class="content">
 
-       <main class="mainContainer col-10">
+        <section class="hero">
+            <h1>Développeuse Web</h1>
+            <p><i>Étudiante en développement web – Découvrez mes projets et mon évolution</i></p>
+        </section>
 
-           <h1>Dévéloppeuse</h1>
-           <p><i>Etudiante en web - Mes projets, mes compétences, mon evolution</i></p>
-           
-           <section id="apropos">
-             <h2>A propos</h2>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error excepturi voluptas quis et quae magni odit aspernatur quas voluptatum, dolorum natus dolor neque! Hic repellendus blanditiis impedit, vero id eius!</p>
-           </section>
-       </main>
+        
+        <!-- A PROPOS   -->
+        
+        <section id="apropos" class="sectionBox">
+            <h2>À propos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error excepturi voluptas quis et quae magni odit aspernatur quas voluptatum.</p>
+        </section>
+
+
+        
+        <!--PORTFOLIO -->
        
         <section id="portfolio">
-            
-            <h2>Porfolio</h2>
+            <h2>Portfolio</h2>
+
             <div class="portfolioContainer">
 
                 <div class="cardItem">
-                    <img src="./image/image1.jpg" alt="">
-                    <h2>Port-folio</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos officia dolore ex. Dolorum molestias quas vero exercitationem impedit a, voluptatibus veritatis quam, laboriosam commodi, in delectus necessitatibus debitis. Doloribus, voluptates!</p>
-                    <a href="">Découvrez le projet</a>
-                    
-                </div>
-                              
-                <div class="cardItem">
-                    <img src="./image/image2.jpg" alt="">
-                    <h2>Port-folio</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos officia dolore ex. Dolorum molestias quas vero exercitationem impedit a, voluptatibus veritatis quam, laboriosam commodi, in delectus necessitatibus debitis. Doloribus, voluptates!</p>
-                    <a href="">Découvrez le projet</a>
-                    
+                    <img src="./image/image1.jpg">
+                    <h3>Projet 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#">Voir le projet</a>
                 </div>
 
                 <div class="cardItem">
-                    <img src="./image/image3.jpg" alt="">
-                    <h2>Port-folio</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos officia dolore ex. Dolorum molestias quas vero exercitationem impedit a, voluptatibus veritatis quam, laboriosam commodi, in delectus necessitatibus debitis. Doloribus, voluptates!</p>
-                    <a href="">Découvrez le projet</a>
-                    
+                    <img src="./image/image2.jpg">
+                    <h3>Projet 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#">Voir le projet</a>
                 </div>
+
+                <div class="cardItem">
+                    <img src="./image/image3.jpg">
+                    <h3>Projet 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <a href="#">Voir le projet</a>
+                </div>
+
             </div>
         </section>
-    </div>
-</div>
+
+
+        
+        <!-- COMPETENCES -->
+        
+        <section id="competences" class="sectionBox">
+
+            <h2>Mes compétences</h2>
+    
+            <div class="skill">
+                <span class="label">HTML/CSS</span>
+                <p>HTML/CSS</p>
+                <div class="bar">
+                  <div class="progress skills-htmlcss">90%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="label">JAVASCRIPT</span>
+                 <p>JavaScript</p>
+                <div class="bar">
+                  <div class="progress skills-js">70%</div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span class="label">PHP</span>
+                 <p>PHP</p>
+                <div class="bar">
+                   <div class="progress skills-php">85%</div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT  -->
+      
+        <section id="contact" class="sectionBox">
+            <h2>Contact</h2>
+
+            <!-- formulaire de contact propre -->
+            <form class="contactForm">
+                <label>Nom</label>
+                <input type="text" required>
+
+                <label>Prénom</label>
+                <input type="text" required>
+
+                <label>Age</label>
+                <input type="text" required>
+
+                <label>Lieu de naissance</label>
+                <input type="text" required>
+
+                <label>Email</label>
+                <input type="email" required>
+
+                <label>Mot de passe</label>
+                <input type="password" required>
+
+                <label>Message</label>
+                <textarea rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+    </main>
+<script src="main.js"></script>
+
 </body>
 </html>
