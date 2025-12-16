@@ -3,148 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
 </head>
 
 <body>
 
-      <!-- MENU BURGER (visible seulement en mobile) -->
     <div class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </div>
 
-
     <nav class="sidebar">
-        <img src="./image/profil1.jpeg" alt="Photo de profil" class="profil">
-
-        
+        <img src="/image/profil2.jpeg" class="profil">
         <a href="#apropos">À propos</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#competences">Compétences</a>
         <a href="#contact">Contact</a>
     </nav>
 
-
     <main class="content">
 
         <section class="hero">
             <h1>Développeuse Web</h1>
-            <p><i>Étudiante en développement web – Découvrez mes projets et mon évolution</i></p>
+            <p><i>Étudiante en Développement web – Découvrez mes projets et mon évolution</i></p>
         </section>
 
-        
-        <!-- A PROPOS   -->
-        
         <section id="apropos" class="sectionBox">
             <h2>À propos</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error excepturi voluptas quis et quae magni odit aspernatur quas voluptatum.</p>
+            <p>Je m’appelle Antonia, je suis développeuse web junior, motivée et toujours à la recherche de nouvelles opportunités pour apprendre, progresser et mettre mes compétences au service de projets ambitieux.</p>
         </section>
 
-
-        
-        <!--PORTFOLIO -->
-       
-        <section id="portfolio">
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="sectionBox">
             <h2>Portfolio</h2>
 
             <div class="portfolioContainer">
-
                 <div class="cardItem">
                     <img src="./image/image1.jpg">
                     <h3>Projet 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#">Voir le projet</a>
+                    <p>Description rapide.</p>
+                    <a href="#" class="btn" >Voir le projet</a>
                 </div>
 
                 <div class="cardItem">
                     <img src="./image/image2.jpg">
                     <h3>Projet 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#">Voir le projet</a>
+                    <p>Description rapide.</p>
+                    <a href="#" class="btn" >Voir le projet</a>
                 </div>
 
                 <div class="cardItem">
                     <img src="./image/image3.jpg">
                     <h3>Projet 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#">Voir le projet</a>
+                    <p>Description rapide.</p>
+                    <a href="#" class="btn" >Voir le projet</a>
                 </div>
-
             </div>
         </section>
 
-
-        
         <!-- COMPETENCES -->
-        
         <section id="competences" class="sectionBox">
-
             <h2>Mes compétences</h2>
-    
+
             <div class="skill">
                 <span class="label">HTML/CSS</span>
-                <p>HTML/CSS</p>
-                <div class="bar">
-                  <div class="progress skills-htmlcss">90%</div>
-                </div>
+                <div class="bar"><div class="progress skills-htmlcss">90%</div></div>
             </div>
 
             <div class="skill">
-                <span class="label">JAVASCRIPT</span>
-                 <p>JavaScript</p>
-                <div class="bar">
-                  <div class="progress skills-js">70%</div>
-                </div>
+                <span class="label">JavaScript</span>
+                <div class="bar"><div class="progress skills-js">70%</div></div>
             </div>
 
             <div class="skill">
                 <span class="label">PHP</span>
-                 <p>PHP</p>
-                <div class="bar">
-                   <div class="progress skills-php">85%</div>
-                </div>
+                <div class="bar"><div class="progress skills-php">85%</div></div>
             </div>
-
         </section>
 
-
-        <!-- CONTACT  -->
-      
+        <!-- CONTACT -->
         <section id="contact" class="sectionBox">
             <h2>Contact</h2>
 
-            <!-- formulaire de contact propre -->
-            <form class="contactForm">
+            <form action="https://formspree.io/f/xjknpwdp" method="POST" class="contactForm">
+                 
                 <label>Nom</label>
-                <input type="text" required>
+                <input type="text" name="nom" required>
 
                 <label>Prénom</label>
-                <input type="text" required>
+                <input type="text" name="prenom" required>
 
                 <label>Age</label>
-                <input type="text" required>
-
-                <label>Lieu de naissance</label>
-                <input type="text" required>
+                <input type="date" name="age" required>
 
                 <label>Email</label>
-                <input type="email" required>
+                <input type="email" name="email" required>
 
                 <label>Mot de passe</label>
-                <input type="password" required>
+                <input type="password" name="motdepasse" required>
 
                 <label>Message</label>
-                <textarea rows="5" required></textarea>
+                <textarea name="message" rows="5" required></textarea>
 
                 <button type="submit">Envoyer</button>
             </form>
         </section>
 
-    </main>
-<script src="main.js"></script>
+        <!-- FOOTER-->
 
+        <footer class="footer">
+           <div class="footer-icons">
+               <a href="https://www.linkedin.com/in/antonia-yia-wich-omega-makosso-kambissi-433ab0366/" target="_blank" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+               </a>
+
+               <a href="https://github.com/antonia-bot/Portfolio" target="_blank" aria-label="GitHub">
+                   <i class="bi bi-github"></i>
+                </a>
+
+                <a href="antoniamakosso05@gmail.com" aria-label="Email">
+                    <i class="bi bi-envelope"></i>
+                </a>
+            </div>
+               <p class="footer-text">© 2025 – Antonia | Portfolio</p>
+         </footer>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
